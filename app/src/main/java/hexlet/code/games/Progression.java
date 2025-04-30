@@ -55,9 +55,7 @@ public class Progression {
             if (userAnswer == correctAnswer) {
                 System.out.println("Correct!");
             } else {
-                System.out.printf(
-                        "'%s' is wrong answer ;(. Correct answer was '%d'.%n" +
-                                "Let's try again, %s!%n",
+                System.out.printf("'%s' is wrong answer ;(. Correct answer was '%d'.%nLet's try again, %s!%n",
                         input, correctAnswer, username
                 );
                 return;

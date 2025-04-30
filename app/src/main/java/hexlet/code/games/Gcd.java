@@ -34,7 +34,8 @@ public class Gcd {
             if (userAnswer == correctAnswer) {
                 System.out.println("Correct!");
             } else {
-                System.out.printf("'%s' is wrong answer ;(. Correct answer was '%d'.%nLet's try again, %s!%n", input, correctAnswer, username);
+                System.out.printf("'%s' is wrong answer ;(. Correct answer was '%d'.%nLet's try again, %s!%n",
+                        input, correctAnswer, username);
                 return;
             }
         }
