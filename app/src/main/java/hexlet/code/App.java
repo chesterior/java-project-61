@@ -1,6 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+import hexlet.code.games.Gcd;
+import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 
 import java.util.Scanner;
 
@@ -15,7 +19,6 @@ public class App {
                 5 - Progression
                 6 - Prime
                 0 - Exit\
-                
                 -\s""");
         Scanner s = new Scanner(System.in);
         int choice = s.nextInt();
@@ -56,7 +59,7 @@ public class App {
     }
 
     private static void welcome(int choice) {
-        System.out.println("Your choice: " + choice);
+        System.out.printf("Your choice: %s%n", choice);
         System.out.println("Welcome to the Brain Games!");
     }
 }

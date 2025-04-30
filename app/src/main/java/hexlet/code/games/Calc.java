@@ -3,12 +3,15 @@ package hexlet.code.games;
 import java.util.Scanner;
 import java.util.random.RandomGenerator;
 
+import static hexlet.code.Engine.ROUNDS;
+
 public class Calc {
+
+    private static final int ROUNDS_COUNT = 3;
 
     public static void calcGame(String username) {
         RandomGenerator rnd = RandomGenerator.getDefault();
         Scanner scanner = new Scanner(System.in);
-        final int ROUNDS = 3;
 
         System.out.println("What is the result of the expression?");
 

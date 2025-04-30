@@ -5,10 +5,11 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.random.RandomGenerator;
 
+import static hexlet.code.Engine.ROUNDS;
+
 public class Progression {
 
     public static void progressionGame(String username) {
-        final int ROUNDS = 3;
         final int PROGRESSION_LENGTH = 10;
         RandomGenerator rnd = RandomGenerator.getDefault();
         Scanner scanner = new Scanner(System.in);

@@ -3,10 +3,11 @@ package hexlet.code.games;
 import java.util.Scanner;
 import java.util.random.RandomGenerator;
 
+import static hexlet.code.Engine.ROUNDS;
+
 public class Prime {
 
     public static void primeGame(String username) {
-        final int ROUNDS = 3;
         RandomGenerator rnd = RandomGenerator.getDefault();
         Scanner scanner = new Scanner(System.in);
 
@@ -15,7 +16,7 @@ public class Prime {
         for (int round = 1; round <= ROUNDS; round++) {
             int number = rnd.nextInt(0, 300);
 
-            System.out.println("Question: " + number);
+            System.out.printf("Question: %d", number);
             System.out.print("Your answer: ");
             String userAnswer = scanner.nextLine();
 
@@ -24,12 +25,10 @@ public class Prime {
             } else if (userAnswer.equals("no") && !isPrime(number)) {
                 System.out.println("Correct!");
             } else if (userAnswer.equals("yes")) {
-                System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.\n" +
-                        "Let's try again, " + username + "!");
+                System.out.printf("'yes' is wrong answer ;(. Correct answer was 'no'.%nLet's try again, %s!", username);
                 return;
             } else if (userAnswer.equals("no")) {
-                System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.\n" +
-                        "Let's try again, " + username + "!");
+                System.out.printf("'no' is wrong answer ;(. Correct answer was 'yes'.%nLet's try again, %s!", username);
                 return;
             } else {
                 System.out.println("Invalid choice.");
@@ -43,13 +42,11 @@ public class Prime {
         if (n < 2) {
             return false;
         }
-
         for (int i = 2; i <= Math.sqrt(n); i++) {
             if (n % i == 0) {
                 return false;
             }
         }
-
         return true;
     }
 }
