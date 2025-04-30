@@ -4,6 +4,7 @@ import java.util.Scanner;
 import java.util.random.RandomGenerator;
 
 public class Calc {
+
     public static void calcGame(String username) {
         RandomGenerator rnd = RandomGenerator.getDefault();
         Scanner scanner = new Scanner(System.in);

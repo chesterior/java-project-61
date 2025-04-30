@@ -16,7 +16,7 @@ public class Cli {
             } else if (name.length() > 30) {
                 System.out.println("Invalid name. Not more than 30 characters. Try again.");
             } else {
-                System.out.println("Hello, " + name + "!");
+                System.out.println("Hello, " + name + "!\n");
                 return name;
             }
 

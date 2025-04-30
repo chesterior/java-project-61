@@ -6,6 +6,7 @@ import java.util.Scanner;
 import java.util.random.RandomGenerator;
 
 public class Progression {
+
     public static void progressionGame(String username) {
         final int ROUNDS = 3;
         final int PROGRESSION_LENGTH = 10;
@@ -15,7 +16,7 @@ public class Progression {
         System.out.println("What number is missing in the progression?");
 
         for (int round = 1; round <= ROUNDS; round++) {
-            int start = rnd.nextInt(1, 11);      // начальное число 1–10
+            int start = rnd.nextInt(1, 11);
             int step = rnd.nextInt(2, 6);
             List<Integer> list = new ArrayList<>();
             for (int i = 0; i < PROGRESSION_LENGTH; i++) {

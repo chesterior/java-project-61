@@ -1,9 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.Calc;
-import hexlet.code.games.Even;
-import hexlet.code.games.Gcd;
-import hexlet.code.games.Progression;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
 
@@ -16,8 +13,9 @@ public class App {
                 3 - Calc
                 4 - GCD
                 5 - Progression
+                6 - Prime
                 0 - Exit\
-        
+                
                 -\s""");
         Scanner s = new Scanner(System.in);
         int choice = s.nextInt();
@@ -45,6 +43,11 @@ public class App {
                 welcome(choice);
                 String username = Cli.userName();
                 Progression.progressionGame(username);
+            }
+            case 6 -> {
+                welcome(choice);
+                String username = Cli.userName();
+                Prime.primeGame(username);
             }
             default -> {
                 System.out.println("Invalid choice.");

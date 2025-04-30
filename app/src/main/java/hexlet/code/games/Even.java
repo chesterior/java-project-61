@@ -4,6 +4,7 @@ import java.util.Scanner;
 import java.util.random.RandomGenerator;
 
 public class Even {
+
     public static void evenGame(String username) {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         for (int i = 0; i < 3; i++) {
