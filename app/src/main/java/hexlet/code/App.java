@@ -1,5 +1,8 @@
 package hexlet.code;
 
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+
 import java.util.Scanner;
 
 public class App {
@@ -7,6 +10,7 @@ public class App {
         System.out.print("Please enter the game number and press Enter.\n" +
                 "1 - Greet\n" +
                 "2 - Even\n" +
+                "3 - Calc\n" +
                 "0 - Exit" +
                 "\n- ");
         Scanner s = new Scanner(System.in);
@@ -20,6 +24,11 @@ public class App {
                 welcome(choice);
                 String username = Cli.userName();
                 Even.evenGame(username);
+            }
+            case 3 -> {
+                welcome(choice);
+                String username = Cli.userName();
+                Calc.calcGame(username);
             }
             default -> {
                 System.out.println("Invalid choice.");

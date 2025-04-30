@@ -1,4 +1,4 @@
-package hexlet.code;
+package hexlet.code.games;
 
 import java.util.Scanner;
 import java.util.random.RandomGenerator;
@@ -26,6 +26,6 @@ public class Even {
                 return;
             }
         }
-        System.out.println("Congratulations, " + username + "!");
+        System.out.printf("Congratulations, %s!%n", username);
     }
 }
