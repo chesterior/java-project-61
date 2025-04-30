@@ -9,17 +9,17 @@ import static hexlet.code.Engine.ROUNDS;
 
 public class Progression {
     private static final int PROGRESSION_LENGTH = 10;
+    private static final int MAX_NUMBER_FOR_START = 11;
+    private static final int MAX_NUMBER_FOR_STEP = 6;
 
     public static void progressionGame(String username) {
         RandomGenerator rnd = RandomGenerator.getDefault();
         Scanner scanner = new Scanner(System.in);
-        int maxNumberForStart = 11;
-        int maxNumberForStep = 6;
         System.out.println("What number is missing in the progression?");
 
         for (int round = 1; round <= ROUNDS; round++) {
-            int start = rnd.nextInt(1, maxNumberForStart);
-            int step = rnd.nextInt(2, maxNumberForStep);
+            int start = rnd.nextInt(1, MAX_NUMBER_FOR_START);
+            int step = rnd.nextInt(2, MAX_NUMBER_FOR_STEP);
             List<Integer> list = new ArrayList<>();
             for (int i = 0; i < PROGRESSION_LENGTH; i++) {
                 list.add(start + i * step);

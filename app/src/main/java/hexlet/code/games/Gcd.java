@@ -6,16 +6,16 @@ import java.util.random.RandomGenerator;
 import static hexlet.code.Engine.ROUNDS;
 
 public class Gcd {
+    private static final int MAX_RANDOM = 101;
 
     public static void gcdGame(String username) {
         RandomGenerator rnd = RandomGenerator.getDefault();
         Scanner scanner = new Scanner(System.in);
-        int maxNumber = 101;
         System.out.println("Find the greatest common divisor of given numbers.");
 
         for (int round = 1; round <= ROUNDS; round++) {
-            int a = rnd.nextInt(1, maxNumber);
-            int b = rnd.nextInt(1, maxNumber);
+            int a = rnd.nextInt(1, MAX_RANDOM);
+            int b = rnd.nextInt(1, MAX_RANDOM);
 
             int correctAnswer = gcd(a, b);
 

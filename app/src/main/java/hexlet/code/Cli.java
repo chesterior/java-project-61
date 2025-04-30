@@ -5,18 +5,18 @@ import java.util.Scanner;
 import static hexlet.code.Engine.ROUNDS;
 
 public class Cli {
+    private static final int MIN_NAME_LENGTH = 3;
+    private static final int MAX_NAME_LENGTH = 30;
+
     public static String userName() {
         Scanner scanner = new Scanner(System.in);
-        int minLengthName = 3;
-        int maxLengthName = 30;
-
         for (int attempt = 1; attempt <= ROUNDS; attempt++) {
             System.out.print("May I have your name?\n- ");
             String name = scanner.nextLine().trim();
 
-            if (name.length() <= minLengthName) {
+            if (name.length() <= MIN_NAME_LENGTH) {
                 System.out.println("Invalid name. Not smaller than 3 characters. Try again.");
-            } else if (name.length() >= maxLengthName) {
+            } else if (name.length() >= MAX_NAME_LENGTH) {
                 System.out.println("Invalid name. Not more than 30 characters. Try again.");
             } else {
                 System.out.printf("Hello, %s!\n", name);
