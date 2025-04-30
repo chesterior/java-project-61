@@ -10,11 +10,12 @@ public class Prime {
     public static void primeGame(String username) {
         RandomGenerator rnd = RandomGenerator.getDefault();
         Scanner scanner = new Scanner(System.in);
+        int maxNumber = 300;
 
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
         for (int round = 1; round <= ROUNDS; round++) {
-            int number = rnd.nextInt(0, 300);
+            int number = rnd.nextInt(0, maxNumber);
 
             System.out.printf("Question: %d", number);
             System.out.print("Your answer: ");

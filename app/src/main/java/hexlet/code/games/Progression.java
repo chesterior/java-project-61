@@ -8,17 +8,18 @@ import java.util.random.RandomGenerator;
 import static hexlet.code.Engine.ROUNDS;
 
 public class Progression {
+    private static final int PROGRESSION_LENGTH = 10;
 
     public static void progressionGame(String username) {
-        final int PROGRESSION_LENGTH = 10;
         RandomGenerator rnd = RandomGenerator.getDefault();
         Scanner scanner = new Scanner(System.in);
-
+        int maxNumberForStart = 11;
+        int maxNumberForStep = 6;
         System.out.println("What number is missing in the progression?");
 
         for (int round = 1; round <= ROUNDS; round++) {
-            int start = rnd.nextInt(1, 11);
-            int step = rnd.nextInt(2, 6);
+            int start = rnd.nextInt(1, maxNumberForStart);
+            int step = rnd.nextInt(2, maxNumberForStep);
             List<Integer> list = new ArrayList<>();
             for (int i = 0; i < PROGRESSION_LENGTH; i++) {
                 list.add(start + i * step);

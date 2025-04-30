@@ -9,6 +9,13 @@ import hexlet.code.games.Prime;
 import java.util.Scanner;
 
 public class App {
+    private static final int GREET_OPTION = 1;
+    private static final int EVEN_OPTION = 2;
+    private static final int CALC_OPTION = 3;
+    private static final int GCD_OPTION = 4;
+    private static final int PROGRESSION_OPTION = 5;
+    private static final int PRIME_OPTION = 6;
+
     public static void main(String[] args) {
         System.out.print("""
                 Please enter the game number and press Enter.
@@ -23,31 +30,31 @@ public class App {
         Scanner s = new Scanner(System.in);
         int choice = s.nextInt();
         switch (choice) {
-            case 1 -> {
+            case GREET_OPTION -> {
                 welcome(choice);
                 Cli.userName();
             }
-            case 2 -> {
+            case EVEN_OPTION -> {
                 welcome(choice);
                 String username = Cli.userName();
                 Even.evenGame(username);
             }
-            case 3 -> {
+            case CALC_OPTION -> {
                 welcome(choice);
                 String username = Cli.userName();
                 Calc.calcGame(username);
             }
-            case 4 -> {
+            case GCD_OPTION -> {
                 welcome(choice);
                 String username = Cli.userName();
                 Gcd.gcdGame(username);
             }
-            case 5 -> {
+            case PROGRESSION_OPTION -> {
                 welcome(choice);
                 String username = Cli.userName();
                 Progression.progressionGame(username);
             }
-            case 6 -> {
+            case PRIME_OPTION -> {
                 welcome(choice);
                 String username = Cli.userName();
                 Prime.primeGame(username);

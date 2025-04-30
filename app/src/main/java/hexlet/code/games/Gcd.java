@@ -10,11 +10,12 @@ public class Gcd {
     public static void gcdGame(String username) {
         RandomGenerator rnd = RandomGenerator.getDefault();
         Scanner scanner = new Scanner(System.in);
+        int maxNumber = 101;
         System.out.println("Find the greatest common divisor of given numbers.");
 
         for (int round = 1; round <= ROUNDS; round++) {
-            int a = rnd.nextInt(1, 101);
-            int b = rnd.nextInt(1, 101);
+            int a = rnd.nextInt(1, maxNumber);
+            int b = rnd.nextInt(1, maxNumber);
 
             int correctAnswer = gcd(a, b);
 
@@ -25,9 +26,7 @@ public class Gcd {
             try {
                 userAnswer = Integer.parseInt(input);
             } catch (NumberFormatException e) {
-                System.out.printf(
-                        "'%s' is not a valid number.%nLet's try again, %s!%n",
-                        input, username
+                System.out.printf("'%s' is not a valid number.%nLet's try again, %s!%n", input, username
                 );
                 return;
             }
@@ -35,11 +34,7 @@ public class Gcd {
             if (userAnswer == correctAnswer) {
                 System.out.println("Correct!");
             } else {
-                System.out.printf(
-                        "'%s' is wrong answer ;(. Correct answer was '%d'.%n" +
-                                "Let's try again, %s!%n",
-                        input, correctAnswer, username
-                );
+                System.out.printf("'%s' is wrong answer ;(. Correct answer was '%d'.%nLet's try again, %s!%n", input, correctAnswer, username);
                 return;
             }
         }

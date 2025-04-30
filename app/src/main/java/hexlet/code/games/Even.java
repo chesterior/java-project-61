@@ -8,9 +8,10 @@ import static hexlet.code.Engine.ROUNDS;
 public class Even {
 
     public static void evenGame(String username) {
+        int maxNumber = 101;
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         for (int i = 0; i < ROUNDS; i++) {
-            int randomNumber = RandomGenerator.getDefault().nextInt(101);
+            int randomNumber = RandomGenerator.getDefault().nextInt(maxNumber);
             System.out.printf("Question: %d%nYour answer: ", randomNumber);
             Scanner s = new Scanner(System.in);
             String answer = s.nextLine();

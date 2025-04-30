@@ -6,22 +6,20 @@ import java.util.random.RandomGenerator;
 import static hexlet.code.Engine.ROUNDS;
 
 public class Calc {
-
-    private static final int ROUNDS_COUNT = 3;
-
     public static void calcGame(String username) {
         RandomGenerator rnd = RandomGenerator.getDefault();
         Scanner scanner = new Scanner(System.in);
-
+        int maxNumber = 101;
+        int numberForSwitch = 3;
         System.out.println("What is the result of the expression?");
 
         for (int round = 1; round <= ROUNDS; round++) {
-            int a = rnd.nextInt(0, 101);
-            int b = rnd.nextInt(0, 101);
+            int a = rnd.nextInt(0, maxNumber);
+            int b = rnd.nextInt(0, maxNumber);
 
             char op;
             int correctAnswer;
-            switch (rnd.nextInt(3)) {
+            switch (rnd.nextInt(numberForSwitch)) {
                 case 0 -> {
                     op = '+';
                     correctAnswer = a + b;

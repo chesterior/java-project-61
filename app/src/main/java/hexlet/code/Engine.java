@@ -21,10 +21,7 @@ public class Engine {
                 System.out.println("Correct!");
             } else {
                 System.out.printf(
-                        "'%s' is wrong answer ;(. Correct answer was '%s'.%n" +
-                                "Let's try again, %s!%n",
-                        userAnswer, correctAnswer, username
-                );
+                        "'%s' is wrong answer ;(. Correct answer was '%s'.%nLet's try again, %s!%n", userAnswer, correctAnswer, username);
                 return;
             }
         }
